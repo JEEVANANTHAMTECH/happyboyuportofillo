@@ -28,7 +28,17 @@ function App() {
         <p>
           Passionate about building responsive and user-friendly web applications.
         </p>
-        <button className="btn">Download Resume</button>
+       <button
+  className="btn"
+  onClick={() => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.download = "Jeevanantham-Resume.pdf";
+    link.click();
+  }}
+>
+  Download Resume
+</button>
       </section>
 
       {/* About */}
